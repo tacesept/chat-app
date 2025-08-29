@@ -1,4 +1,3 @@
-
 # Chat App
 
 This is a simple real-time chat app.  
@@ -18,7 +17,8 @@ It uses **MongoDB**, **Express**, **React**, and **Socket.IO**.
 ```bash
 git clone https://github.com/tacesept/chat-app.git
 cd chat-app
-````
+```
+
 ### 2. Add `.env` file
 
 In the project root, make a file called `.env` and add:
@@ -48,4 +48,10 @@ The app will run on:
 ```
 http://localhost:5001
 ```
- 
+
+## Screenshots
+
+<p align="center">
+  <img src="images/users.png" width="45%" />
+  <img src="images/message.png" width="45%" />
+</p>
