@@ -35,10 +35,6 @@ const App = () => {
           path="/:id"
           element={authUser ? <Message /> : <Navigate to={"/login"} />}
         />
-        {/* <Route
-          path="/:id"
-          element={authUser ? <Test /> : <Navigate to={"/login"} />}
-        /> */}
         <Route
           path="/login"
           element={authUser ? <Navigate to={"/"} /> : <Login />}
