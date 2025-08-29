@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm i -C backend && npm i -C frontend && npm run build -C frontend",
     "start": "npm run start -C backend",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build" 
   },
   "repository": {
     "type": "git",
