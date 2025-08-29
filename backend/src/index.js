@@ -3,7 +3,6 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
-import { fileURLToPath } from "url";
 
 import connectDB from "./db/mongo.db.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -12,8 +11,7 @@ import userRoutes from "./routes/user.routes.js";
 import { app, server } from "./socket/socket.js";
 
 const PORT = process.env.PORT || 5001;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = path.resolve();
 
 if (process.env.NODE_ENV !== "production") {
   app.use(
@@ -32,10 +30,10 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.resolve(__dirname, "../frontend/dist")));
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
+  app.get("/*splat", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
 

@@ -13,7 +13,7 @@ export const useSocketStore = create((set, get) => ({
   connectSocket: (authUser) => {
     if (!authUser || get().socket) return;
 
-    const socket = io("http://localhost:5001", {
+    const socket = io("/", {
       query: { userId: authUser._id },
     });
 

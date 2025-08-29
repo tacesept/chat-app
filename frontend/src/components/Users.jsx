@@ -14,7 +14,7 @@ const Users = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("http://localhost:5001/api/users/", {
+        const res = await fetch("api/users/", {
           method: "GET",
           credentials: "include", // send cookies (JWT)
         });

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 import notificationSound from "../assets/sounds/notification.mp3";
 
-const socket = io("http://localhost:5001");
+const socket = io("/");
 
 export default function App() {
   const [messages, setMessages] = useState([]);
@@ -12,7 +12,7 @@ export default function App() {
   useEffect(() => {
     const fetchMessages = async () => {
       const res = await fetch(
-        `http://localhost:5001/api/messages/68aad90bb30f56ab0a07ad09`,
+        `api/messages/68aad90bb30f56ab0a07ad09`,
         {
           method: "GET",
           credentials: "include", // if using cookies/jwt

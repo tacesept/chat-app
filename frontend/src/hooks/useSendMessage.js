@@ -16,7 +16,7 @@ const useSendMessage = () => {
   const sendMessage = async (message) => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5001/api/messages/send/${id}`, {
+      const res = await fetch(`api/messages/send/${id}`, {
         method: "POST",
         credentials: "include",
         headers: {
