@@ -1,10 +1,9 @@
 import { Navigate, Route, Routes } from "react-router";
 import Home from "./pages/Home";
-import Login from "./pages/login";
-import Signup from "./pages/signup";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 import Message from "./pages/Message";
-import Test from "./pages/Test";
 import { useAuth } from "./context/useAuth";
 import { useSocketStore } from "./context/useSocketStore";
 import { useEffect } from "react";
